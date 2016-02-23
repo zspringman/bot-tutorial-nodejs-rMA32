@@ -30,12 +30,11 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   }
-  
   else if(request.text && botRegexJon.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Jon, it seems that may be experiencing your monthly mesntrual cycle.");
     this.res.end();
-  
+  }
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");

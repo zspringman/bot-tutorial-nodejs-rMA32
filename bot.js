@@ -32,7 +32,7 @@ function respond() {
   }
   else if(request.text && botRegexJon.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Jon, it seems that may be experiencing your monthly mesntrual cycle.");
+    postMessage("Jon, it seems that you may be experiencing your monthly mesntrual cycle. Also, please do not try to correct me I am a work in progress.");
     this.res.end();
   }
   else if(request.text && botRegexAd.test(request.text)) {

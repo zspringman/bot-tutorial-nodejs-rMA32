@@ -9,6 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/;
+      botRegexJon = /^\/Jon/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -28,7 +29,13 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
-  } 
+  }
+  
+  else if(request.text && botRegexJon.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Jon, it seems that may be experiencing your monthly mesntrual cycle.");
+    this.res.end();
+  
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
@@ -36,7 +43,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
+    postMessage("https://www.daddyleagues.com/ngvba/rules");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
@@ -66,7 +73,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://www.reddit.com/r/maddenall32");
     this.res.end();
-  } 
+  }
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("¯\\_(ツ)_/¯");

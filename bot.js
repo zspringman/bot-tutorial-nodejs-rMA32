@@ -38,7 +38,7 @@ function respond() {
     postMessage("Jon, it seems that you may be experiencing your monthly mesntrual cycle. Also, please do not try to correct me I am a work in progress.");
     this.res.end();
   }
-  else if(request.text && botRegexJon1.test(request.text)) {
+  else if(request.text && botRegexJon2.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i.imgur.com/XtWPLsa.png");
     this.res.end();

@@ -40,7 +40,7 @@ function respond() {
   }
   else if(request.text && botRegxJon2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.imgur.com/XtWPLsa.png");
+    postMessage("https://i.groupme.com/1500x1125.jpeg.a0f5759d3c4b4f2f91dc40a6e199bdb1.large");
     this.res.end();
   }
   else if(request.text && botRegexSched.test(request.text)) {

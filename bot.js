@@ -12,6 +12,7 @@ function respond() {
       botRegexJon = /^\/Jon/;
       botRegexSched = /^\/schedule/;
       botRegxJon2 = /^\/fag/;
+      botRegexBlurry = /^\/faggot/;
       
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -36,6 +37,11 @@ function respond() {
   else if(request.text && botRegexJon.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Jon, it seems that you may be experiencing your monthly mesntrual cycle. Also, please do not try to correct me I am a work in progress.");
+    this.res.end();
+  }
+    else if(request.text && botRegexBlurry.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("@The Jags Have Returned is a bitch LOOK: https://imgur.com/a/PD3dc");
     this.res.end();
   }
   else if(request.text && botRegxJon2.test(request.text)) {

@@ -62,7 +62,7 @@ function respond() {
   }
   else if(request.text && botRegexBlurry2.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://newscult.com/wp-content/uploads/2015/08/Screen-Shot-2015-08-07-at-9.30.48-AM-2.jpg");
+    postMessage("http://www.gettyimages.com/detail/news-photo/patrick-kane-of-the-chicago-blackhawks-waves-to-the-crowd-news-photo/491739802");
     this.res.end();
   }
   else if(request.text && botRegexNum2.test(request.text)) {

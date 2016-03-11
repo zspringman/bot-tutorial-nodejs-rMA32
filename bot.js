@@ -13,6 +13,7 @@ function respond() {
       botRegexSched = /^\/schedule/;
       botRegxJon2 = /^\/fag/;
       botRegexBlurry = /^\/faggot/;
+      botRegexBlurry2 = /^\/blurry/;
       botRegexNum2 = /^\/p#2/;
       botRegexWest = /^\/west/;
       botRegexTroll = /^\/troll/;
@@ -55,6 +56,11 @@ function respond() {
     else if(request.text && botRegexBlurry.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://imgur.com/a/PD3dc");
+    this.res.end();
+  }
+  else if(request.text && botRegexBlurry2.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://newscult.com/wp-content/uploads/2015/08/Screen-Shot-2015-08-07-at-9.30.48-AM-2.jpg");
     this.res.end();
   }
   else if(request.text && botRegexNum2.test(request.text)) {

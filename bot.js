@@ -54,7 +54,7 @@ function respond() {
   }
     else if(request.text && botRegexBlurry.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("@The Jags Have Returned is a bitch LOOK: https://imgur.com/a/PD3dc");
+    postMessage("https://imgur.com/a/PD3dc");
     this.res.end();
   }
   else if(request.text && botRegexNum2.test(request.text)) {

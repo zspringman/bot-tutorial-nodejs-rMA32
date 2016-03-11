@@ -17,6 +17,8 @@ function respond() {
       botRegexNum2 = /^\/p#2/;
       botRegexWest = /^\/west/;
       botRegexTroll = /^\/troll/;
+      botRegexStg = /^\/stg/;
+      
       
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
@@ -78,9 +80,9 @@ function respond() {
     postMessage("https://www.daddyleagues.com/ngvba/schedules");
     this.res.end();
   }
-  else if(request.text && botRegexAd.test(request.text)) {
+  else if(request.text && botRegexStg.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
+    postMessage("http://www.daddyleagues.com/ngvba/standings/league");
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {

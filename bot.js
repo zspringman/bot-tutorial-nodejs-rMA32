@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/;  botRegexDL = /^\/dcl/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
+      botRegex = /^\/cool guy/;  botRegexDL = /^\/ddl/i; botRegexSalt = /^\/salt/; botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/;
@@ -18,6 +18,7 @@ function respond() {
       botRegexWest = /^\/west/;
       botRegexTroll = /^\/troll/;
       botRegexStg = /^\/stg/;
+      botRegexInformation = /^\/inf/;
       
       
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -40,9 +41,13 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   }
-  else if(request.text && botRegexWest.test(request.text)) {
+  else if(request.text && botRegexInformation.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://images.huffingtonpost.com/2015-02-09-oKANYEWESTfacebook.jpg");
+    postMessage("Hello, I'm your friendly Madden Institute Bot. I'm here to help you access DaddyLeagues and pester people like Jon. Here are a couple of my Commands:
+    "/sdl - *team 3 letter initials* pulls up a teams schedule. NYG, NYJ etc.
+    "/ddl - *team 3 letter initials* pulls up a specific team's depth chart.
+    "/pdl - player last name and/or full name will search DaddyLeagues for a specific player")
+    "/schedule - this will pull up the league schedule for the current week";
     this.res.end();
   }
   else if(request.text && botRegexTroll.test(request.text)) {

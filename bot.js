@@ -43,11 +43,7 @@ function respond() {
   }
   else if(request.text && botRegexInformation.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Hello, I'm your friendly Madden Institute Bot. I'm here to help you access DaddyLeagues and pester people like Jon. Here are a couple of my Commands:
-    "/sdl - *team 3 letter initials* pulls up a teams schedule. NYG, NYJ etc."
-    "/ddl - *team 3 letter initials* pulls up a specific team's depth chart."
-    "/pdl - player last name and/or full name will search DaddyLeagues for a specific player")
-    "/schedule - this will pull up the league schedule for the current week";
+    postMessage("Hello, I'm your friendly Madden Institute Bot. I'm here to help you access DaddyLeagues and pester people like Jon. Here are a couple of my Commands: /sdl - *team 3 letter initials* pulls up a teams schedule. NYG, NYJ etc./ddl - *team 3 letter initials* pulls up a specific team's depth chart. /pdl - player last name and/or full name will search DaddyLeagues for a specific player) /schedule - this will pull up the league schedule for the current week";
     this.res.end();
   }
   else if(request.text && botRegexTroll.test(request.text)) {

@@ -41,9 +41,9 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   }
-  else if(request.text && botRegexTroll.test(request.text)) {
+  else if(request.text && botRegexInformation.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://khalil-shreateh.com/khalil.shtml/images/articles/facebook/trolling.jpg");
+    postMessage("I'm a synth, use me for DaddyLeagues purposes. Call a command by using /. /sdl and team initials (ex: NYG) will pull up a team schedule. /pdl (player name) will look up a specific player. /ddl NYG would look up a specific team's roster. /Schedule looks up the current weeks schedule. And always remember, Jon is a bitch.");
     this.res.end();
   }
   else if(request.text && botRegexJon.test(request.text)) {

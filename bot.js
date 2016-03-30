@@ -41,11 +41,6 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   }
-  else if(request.text && botRegexInformation.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(");
-    this.res.end();
-  }
   else if(request.text && botRegexTroll.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://khalil-shreateh.com/khalil.shtml/images/articles/facebook/trolling.jpg");

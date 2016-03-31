@@ -14,7 +14,7 @@ function respond() {
       botRegxJon2 = /^\/fag/;
       botRegexBlurry = /^\/faggot/;
       botRegexBlurry2 = /^\/blurry/;
-      botRegexNum2 = /^\/p#2/;
+      botRegexCap = /^\/beware/;
       botRegexWest = /^\/west/;
       botRegexTroll = /^\/troll/;
       botRegexStg = /^\/stg/;
@@ -61,9 +61,9 @@ function respond() {
     postMessage("http://www.gettyimages.com/detail/news-photo/patrick-kane-of-the-chicago-blackhawks-waves-to-the-crowd-news-photo/491739802");
     this.res.end();
   }
-  else if(request.text && botRegexNum2.test(request.text)) {
+  else if(request.text && botRegexCap.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://images4.fanpop.com/image/photos/24300000/Austin-Powers-Number-2-austin-powers-24335442-1024-768.jpg");
+    postMessage("Sign and Trade as you may, but the cap penalty will always stay. ");
     this.res.end();
   }
   else if(request.text && botRegxJon2.test(request.text)) {

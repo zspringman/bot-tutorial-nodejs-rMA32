@@ -19,6 +19,7 @@ function respond() {
       botRegexTroll = /^\/troll/;
       botRegexStg = /^\/stg/;
       botRegexInformation = /^\/info/;
+      botRegexEzee = /^\/ezee/;
       
       
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -39,6 +40,11 @@ function respond() {
   else if(request.text && botRegexSalt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgur.com/B5BSVqH.png");
+    this.res.end();
+  }
+  else if(request.text && botRegexEzee.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Ezee it seems today you haven't smoked any Reggie. With that being said if you need me to PayPal you $6 so you can get a nick sack 1 single and 2 cigars I would gladly help you. Sike!!!! And always remember you are Jon's bitch even though you're no longer in his division. STAY LOSING.");
     this.res.end();
   }
   else if(request.text && botRegexInformation.test(request.text)) {

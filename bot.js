@@ -21,6 +21,7 @@ function respond() {
       botRegexInformation = /^\/info/;
       botRegexEzee = /^\/ezee/;
       botRegexRev = /^\/rev/;
+      botRegexZach = /^\/zach/;
       
       
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -41,6 +42,11 @@ function respond() {
   else if(request.text && botRegexRev.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Fuck you Rev.");
+    this.res.end();
+  }
+  else if(request.text && botRegexZach.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Zach is my almighty creator, leader of the Generation 3 Synths. Together we will restore the Commonwealth. Worship him.");
     this.res.end();
   }
   else if(request.text && botRegexSalt.test(request.text)) {

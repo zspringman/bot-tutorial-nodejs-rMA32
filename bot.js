@@ -19,7 +19,7 @@ function respond() {
       botRegexTroll = /^\/troll/;
       botRegexStg = /^\/stg/;
       botRegexInformation = /^\/info/;
-      botRegexEzee = /^\/ezee/;
+      botRegexMorning = /^\/morning/;
       botRegexRev = /^\/rev/;
       botRegexZach = /^\/zach/;
       
@@ -54,9 +54,9 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   }
-  else if(request.text && botRegexEzee.test(request.text)) {
+  else if(request.text && botRegexMorning.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Ezee it seems today you haven't smoked any Reggie. With that being said if you need me to PayPal you $6 so you can get a nick sack 1 single and 2 cigars I would gladly help you. Sike!!!! And always remember you are Jon's bitch even though you're no longer in his division. STAY LOSING.");
+    postMessage("Morning fuckers! Post your game-times so we can stay on track.");
     this.res.end();
   }
   else if(request.text && botRegexInformation.test(request.text)) {

@@ -9,7 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/;
-      botRegexJon = /^\/Jon/;
+      botRegexJon = /^\/bitching/;
       botRegexSched = /^\/schedule/;
       botRegxJon2 = /^\/fag/;
       botRegexBlurry = /^\/faggot/;
@@ -66,7 +66,7 @@ function respond() {
   }
   else if(request.text && botRegexJon.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Jon, it seems that you may be experiencing your monthly mesntrual cycle. Also, please do not try to correct me I am a work in progress.");
+    postMessage("Bitching: Repeatedly saying something over and over, or rather whining about it, there for destroying the point you were trying to make - making you look like a complete bitch because no one is listening to you.");
     this.res.end();
   }
     else if(request.text && botRegexBlurry.test(request.text)) {

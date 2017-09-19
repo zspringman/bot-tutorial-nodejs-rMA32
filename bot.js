@@ -20,7 +20,7 @@ function respond() {
       botRegexStg = /^\/stg/;
       botRegexInformation = /^\/info/;
       botRegexMorning = /^\/morning/;
-      botRegexRev = /^\/rev/;
+      botRegexRev = /^\/dougpederson
       botRegexZach = /^\/zach/;
       
       
@@ -39,14 +39,14 @@ function respond() {
     postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
     this.res.end();
   }
-  else if(request.text && botRegexRev.test(request.text)) {
+  else if(request.text && botRegexDoug.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Fuck you Rev.");
+    postMessage("http://phillyinfluencer.com/wp-content/uploads/2016/02/Doug-Pederson.jpg");
     this.res.end();
   }
   else if(request.text && botRegexZach.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Zach is my almighty creator, leader of the Generation 3 Synths. Together we will restore the Commonwealth. Worship him.");
+    postMessage("Bow down");
     this.res.end();
   }
   else if(request.text && botRegexSalt.test(request.text)) {
@@ -61,7 +61,7 @@ function respond() {
   }
   else if(request.text && botRegexInformation.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("I'm a synth, use me for DaddyLeagues purposes. Call a command by using /. /sdl and team initials (ex: NYG) will pull up a team schedule. /pdl (player name) will look up a specific player. /ddl NYG would look up a specific team's roster. /Schedule looks up the current weeks schedule. And always remember, Jon is a bitch.");
+    postMessage("I'm Carson Wentz, your personal Dynasty helper! Let me know what I can do for you. Go Eagles!");
     this.res.end();
   }
   else if(request.text && botRegexJon.test(request.text)) {
